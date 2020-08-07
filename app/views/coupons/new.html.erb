@@ -1,0 +1,38 @@
+<h2> Coupon Form </h2>
+
+<!-- <% if flash[:error] %>
+    <% flash[:error].each do |e|%>
+        <p><%= e %></p>
+    <%end%>
+<%end%> -->
+
+<%= form_tag coupons_path do %>
+    <%= text_field_tag :"coupon[store]" %>
+    <%= text_field_tag :"coupon[coupon_code]" %>
+<%= submit_tag "Submit Coupon" %>
+<% end %>
+
+
+
+<!-- <%= form_tag coupons_path do %>
+  <label>Store:</label><br>
+  <input type="text" id="store" name="coupon[store]"><br>
+ 
+  <label>Coupon Code:</label><br>
+  <textarea id="coupon_code" name="coupon[coupon_code]"></textarea><br>
+ 
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit coupon">
+<% end %> -->
+
+
+<!--<%= form_for @coupon do |f| %>
+    <%= f.label :store %>
+    <%= f.text_field :store %>
+
+    <%= f.label :coupon_code %>
+    <%= f.text_field :coupon_code %>
+
+    <%= f.submit %>
+
+<%end%> -->
